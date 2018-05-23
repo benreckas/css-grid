@@ -18,7 +18,7 @@
     <div class="item item6">6</div>
     <div class="item item7">7</div>
     <div class="item item8">8</div>
-    <div class="item item8">💩</div>
+    <div class="item poop">💩</div>
     <div class="item item9">9</div>
     <div class="item item10">10</div>
     <div class="item item11">11</div>
@@ -49,6 +49,18 @@
       grid-gap: 20px;
       grid-template-columns: repeat(5, 1fr);
     }
+
+    .poop {
+      /* Tell the div the start and end column explicitly */
+      grid-column: 2 / 5;
+      /* Take up the full span of all columns */
+      /* 1 / -1 only works when the columns or rows are explicitly defined */
+      grid-column: 1 / -1;
+      /* Tell it the starting column and how many columns you want it to take up */
+      grid-column: 1 / span 3;
+      background: #BADA55;
+    }
+
   </style>
 </body>
 
